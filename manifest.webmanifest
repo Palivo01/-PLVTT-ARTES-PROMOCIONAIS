@@ -1,0 +1,8 @@
+{
+  "name": "Palivo Tattoo Studio",
+  "short_name": "Palivo Tattoo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808"
+}

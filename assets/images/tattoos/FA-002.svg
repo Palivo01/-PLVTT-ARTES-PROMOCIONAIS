@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="900" viewBox="0 0 610 760">
+<rect width="610" height="760" fill="#9f9c96"/>
+<g fill="none" stroke="#161616" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M105 400 L305 95 L505 400 Z"/><circle cx="305" cy="285" r="120"/><path d="M125 285 H485"/></g>
+<text x="305" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#161616">FA-002</text>
+<text x="305" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="4" fill="#3c3935">ARTE DE TESTE</text>
+<text x="305" y="705" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#4b4742">SUBSTITUIR PELA TATUAGEM REAL</text>
+</svg>
