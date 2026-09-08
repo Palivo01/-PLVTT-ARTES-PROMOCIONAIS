@@ -1,0 +1,19 @@
+.tattoo-art{display:block;width:100%;padding:0;border:0;cursor:zoom-in;color:#fff}
+.zoom-hint{position:absolute;right:12px;bottom:12px;z-index:2;padding:7px 10px;border-radius:999px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.24);font-size:.7rem;font-weight:800;letter-spacing:.05em;backdrop-filter:blur(8px)}
+.selected-preview.show{display:block}
+.cart-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}
+.cart-title span{font-size:.78rem;color:#d9b56f}
+.cart-items{display:grid;gap:10px}
+.cart-item{display:grid;grid-template-columns:62px 1fr auto;gap:11px;align-items:center;padding:9px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(0,0,0,.24)}
+.cart-item img{width:62px;height:72px;border-radius:9px;object-fit:cover}
+.cart-item>div{display:grid;gap:3px;min-width:0}
+.cart-item span{font-size:.75rem;color:#aaa39a}
+.cart-item small{color:#e5c37c}
+.remove-item{border:1px solid rgba(224,128,114,.35);background:#211311;color:#efaaa0;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;cursor:pointer}
+.art-lightbox[hidden]{display:none}
+.art-lightbox{position:fixed;z-index:1000;inset:0;display:grid;place-items:center;padding:58px 18px 42px;background:rgba(0,0,0,.94);backdrop-filter:blur(10px)}
+.art-lightbox img{max-width:min(96vw,900px);max-height:calc(100svh - 115px);width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 22px 80px rgba(0,0,0,.7)}
+.art-lightbox>span{position:absolute;bottom:14px;color:#aaa39a;font-size:.74rem}
+.lightbox-close{position:absolute;z-index:2;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:#161616;color:#fff;font-size:1.65rem;cursor:pointer}
+body.lightbox-open{overflow:hidden}
+@media(max-width:560px){.cart-item{grid-template-columns:54px 1fr}.cart-item img{width:54px;height:64px}.remove-item{grid-column:1/-1;width:100%}.art-lightbox{padding-inline:8px}.art-lightbox img{max-width:100%;border-radius:8px}}

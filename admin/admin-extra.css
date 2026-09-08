@@ -1,0 +1,4 @@
+.auto-code{display:grid;align-content:start;gap:7px;margin-bottom:16px;padding:12px 14px;border:1px dashed rgba(217,181,111,.32);border-radius:13px;background:rgba(217,181,111,.05)}
+.auto-code span{font-size:.83rem;color:#ddd}
+.auto-code strong{color:var(--gold2)}
+.auto-code small{color:var(--muted)}

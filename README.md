@@ -8,6 +8,10 @@ PAINEL ADMINISTRATIVO
 - O painel permite cadastrar, editar e excluir tatuagens.
 - Permite upload de JPG, PNG ou WebP de até 8 MB.
 - Permite alterar preços, categoria, ordem e status.
+- O código e a ordem são gerados automaticamente conforme a categoria.
+- O cadastro não solicita nome nem observação da tatuagem.
+- O cliente pode ampliar cada arte em tela cheia.
+- O pedido aceita várias tatuagens e permite remover itens antes do WhatsApp.
 - A chave de disponibilidade atualiza o catálogo sem novo deploy.
 - O acesso é protegido pelo Supabase Auth e pelas políticas RLS do banco.
 
@@ -66,5 +70,5 @@ Arquivo otimizado para web a partir do material enviado.
 
 
 COPY V1.2
-Campanha: Setembro com o Palivo.
-A copy do hero, introdução do catálogo, categorias, bloco de escolha e fechamento foi atualizada para campanha promocional de setembro. Funcionalidades, GA4, WhatsApp, catálogo e preços foram preservados.
+Campanha: Mês da Tattoo.
+A copy do hero, introdução do catálogo, categorias, bloco de escolha e fechamento foi atualizada para a campanha Mês da Tattoo. Funcionalidades, GA4, WhatsApp, catálogo e preços foram preservados.
