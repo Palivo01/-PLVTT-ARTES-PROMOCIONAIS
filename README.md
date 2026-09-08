@@ -1,6 +1,25 @@
-PALIVO TATTOO STUDIO — V1.2
+PALIVO TATTOO STUDIO — V2.0 SUPABASE
 
-Landing page estática em HTML + CSS + JavaScript puro.
+Landing page em HTML + CSS + JavaScript puro, com catálogo e painel administrativo conectados ao Supabase.
+
+PAINEL ADMINISTRATIVO
+- Endereço: /admin/
+- Usuário exibido no login: Palivo
+- O painel permite cadastrar, editar e excluir tatuagens.
+- Permite upload de JPG, PNG ou WebP de até 8 MB.
+- Permite alterar preços, categoria, ordem e status.
+- A chave de disponibilidade atualiza o catálogo sem novo deploy.
+- O acesso é protegido pelo Supabase Auth e pelas políticas RLS do banco.
+
+STATUS DISPONÍVEIS
+- disponivel: aparece com o botão "Quero essa".
+- em_negociacao: fica visível, mas bloqueada temporariamente.
+- indisponivel: fica visível, mas não pode ser selecionada.
+
+ARQUIVO DE CONEXÃO
+- assets/js/supabase-config.js contém apenas a Project URL e a Publishable Key.
+- A Publishable Key é pública por definição e as alterações dependem de login + RLS.
+- Nunca inserir Secret Key ou service_role nos arquivos do site.
 
 DADOS CONFIGURADOS
 - WhatsApp: 55 71 99675-4698
@@ -23,18 +42,14 @@ ALTERAÇÕES V1.1
 - FAQ atualizado.
 - Responsividade mobile refeita para evitar overflow do header e manter os carrosséis dentro do viewport.
 
-CATÁLOGO DE TESTE
-As 15 artes são PLACEHOLDERS e não representam trabalhos reais do Palivo.
+CATÁLOGO
+O site não usa mais assets/js/tattoos.js. As artes são carregadas da tabela public.tattoos no Supabase.
 
-COMO TROCAR UMA TATUAGEM
-1. Coloque a imagem real em assets/images/tattoos/
-2. Abra assets/js/tattoos.js
-3. No ID desejado, troque `imagem`
-4. Atualize `precoDe`, `precoPor` e `status`
-
-STATUS PERMITIDOS
-- status: "disponivel"
-- status: "indisponivel"
+COMO ADMINISTRAR
+1. Acesse https://SEU-DOMINIO/admin/
+2. Entre como Palivo e use a senha cadastrada no Supabase.
+3. Clique em Nova tatuagem para cadastrar uma arte.
+4. Use a chavinha no catálogo administrativo para disponibilizar ou indisponibilizar.
 
 WHATSAPP
 O número fica em assets/js/script.js, dentro de CONFIG.whatsapp.

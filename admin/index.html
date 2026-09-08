@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Painel administrativo | Palivo Tattoo</title>
+  <link rel="icon" href="../assets/images/brand/logo.png">
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="../assets/js/supabase-config.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <section id="loginView" class="login-card">
+      <img src="../assets/images/brand/logo.png" alt="Palivo Tattoo Studio">
+      <span class="eyebrow">Área administrativa</span>
+      <h1>Gerencie suas artes.</h1>
+      <p>Entre com seu usuário e senha para atualizar o catálogo.</p>
+      <form id="loginForm">
+        <label>Usuário<input id="username" autocomplete="username" value="Palivo" required></label>
+        <label>Senha<input id="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit" class="primary">Entrar</button>
+      </form>
+      <div id="loginMessage" class="message" role="alert"></div>
+      <a class="back" href="../">← Voltar ao site</a>
+    </section>
+
+    <section id="dashboardView" class="dashboard" hidden>
+      <header class="topbar">
+        <div><img src="../assets/images/brand/logo.png" alt=""><div><span class="eyebrow">Painel administrativo</span><h1>Artes promocionais</h1></div></div>
+        <div class="top-actions"><a href="../" target="_blank">Ver site</a><button id="logoutBtn" class="ghost">Sair</button></div>
+      </header>
+
+      <div id="appMessage" class="message" role="status"></div>
+      <div class="toolbar"><div><strong id="artCount">0 artes</strong><span>Atualize preços e disponibilidade sem republicar o site.</span></div><button id="newBtn" class="primary">+ Nova tatuagem</button></div>
+
+      <section id="editorPanel" class="editor" hidden>
+        <div class="editor-head"><h2 id="editorTitle">Nova tatuagem</h2><button id="closeEditor" class="icon-btn" aria-label="Fechar">×</button></div>
+        <form id="tattooForm">
+          <input type="hidden" id="recordId">
+          <input type="hidden" id="currentImagePath">
+          <div class="form-grid">
+            <label>Código da arte<input id="codigo" placeholder="Ex.: FA-001" maxlength="40" required></label>
+            <label>Nome<input id="nome" placeholder="Ex.: Floral 01" maxlength="100" required></label>
+            <label>Categoria<select id="categoria" required><option value="fine-art">Fine Art</option><option value="fine-line">Fine Line</option><option value="cristao">Cristão</option><option value="realismo">Realismo</option><option value="escrita">Escrita</option></select></label>
+            <label>Status<select id="status" required><option value="disponivel">Disponível</option><option value="em_negociacao">Em negociação</option><option value="indisponivel">Indisponível</option></select></label>
+            <label>Preço anterior (R$)<input id="precoDe" type="number" min="0" step="0.01" placeholder="500,00" required></label>
+            <label>Preço promocional (R$)<input id="precoPor" type="number" min="0" step="0.01" placeholder="350,00" required></label>
+            <label>Ordem de exibição<input id="ordem" type="number" min="0" step="1" value="0"></label>
+            <label class="upload">Imagem<input id="imagem" type="file" accept="image/jpeg,image/png,image/webp"><small>JPG, PNG ou WebP. Até 8 MB.</small></label>
+            <label class="wide">Observação<textarea id="observacao" rows="3" placeholder="Informação opcional sobre a arte"></textarea></label>
+          </div>
+          <div id="imagePreview" class="image-preview" hidden></div>
+          <div class="form-actions"><button type="button" id="cancelBtn" class="ghost">Cancelar</button><button type="submit" id="saveBtn" class="primary">Salvar tatuagem</button></div>
+        </form>
+      </section>
+
+      <section id="tattooList" class="tattoo-list" aria-live="polite"></section>
+    </section>
+  </main>
+</body>
+</html>
