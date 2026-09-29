@@ -17,3 +17,5 @@
 .lightbox-close{position:absolute;z-index:2;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:#161616;color:#fff;font-size:1.65rem;cursor:pointer}
 body.lightbox-open{overflow:hidden}
 @media(max-width:560px){.cart-item{grid-template-columns:54px 1fr}.cart-item img{width:54px;height:64px}.remove-item{grid-column:1/-1;width:100%}.art-lightbox{padding-inline:8px}.art-lightbox img{max-width:100%;border-radius:8px}}
+
+.buy-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}.guide-item{display:flex;align-items:flex-start;gap:14px;padding:17px 18px;border:1px solid rgba(217,181,111,.2);border-radius:18px;background:linear-gradient(145deg,rgba(217,181,111,.08),rgba(255,255,255,.018));color:#d8d2ca;line-height:1.5}.guide-item b{flex:0 0 auto;font-family:Georgia,serif;font-size:1.45rem;color:#d9b56f;font-weight:400}.guide-item span{font-size:.88rem}@media(max-width:800px){.buy-guide{grid-template-columns:1fr}.guide-item{padding:15px 16px}}
